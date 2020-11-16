@@ -34,6 +34,7 @@ export default function Home({ allPostsData }) {
 	);
 }
 
+// Static Generation - getStaticProps()
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData();
 	return {
@@ -42,3 +43,12 @@ export async function getStaticProps() {
 		}
 	};
 }
+
+// Server Side Rendering - getServerSideProps()
+// export async function getServerSideProps(context) {
+//   return {
+//     props: {
+//       // props for your component
+//     }
+//   }
+// }
